@@ -1,0 +1,9 @@
+---
+layout: post
+title: "A New Site"
+date: 2020-01-28 14:53:36 -0800
+---
+
+Hello, and welcome to the new bio / internet home for Octavia Togami, i.e. **me**.
+
+I don't intend to update this very often, but at least the content is semi-relevant again :).

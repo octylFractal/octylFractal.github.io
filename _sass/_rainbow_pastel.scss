@@ -1,0 +1,18 @@
+
+.rainbow {
+  & > * {
+    display: inline-block;
+  }
+
+  & > :nth-child(3n+1) {
+    color: #be9fe1;
+  }
+
+  & > :nth-child(3n+2) {
+    color: #c9b6e4;
+  }
+
+  & > :nth-child(3n) {
+    color: #e1ccec;
+  }
+}

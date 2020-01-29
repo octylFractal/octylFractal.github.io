@@ -1,9 +1,21 @@
-title: The House of Octavia Togami
+title: '@octylFractal'
 email: octavia.togami@gmail.com
-description: >- 
-    The internet home of Octavia Togami, also known as @octylFractal.
 baseurl: "/"
 url: "https://octyl.net"
+
+# Special variables:
 github_username: octylFractal
 
 permalink: /:categories/:year/:month/:day/:title/
+
+sass:
+  style: compressed
+
+exclude:
+  - .idea
+  - Gemfile
+  - Gemfile.lock
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/

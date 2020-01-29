@@ -1,0 +1,50 @@
+---
+layout: page
+title: About
+---
+
+Hi! I'm Octavia Togami, a front-end / back-end software engineer with experience in many 
+[languages](#programming-languages). In my spare time, I play a variety of [video games](#video-games) and work on
+[my own projects](https://github.com/octylFractal). I also provide software mentoring to students that are a part of
+FIRST® Robotics Team 5818, [Riviera Robotics](https://www.rivierarobotics.org/).
+
+I currently reside in: _Goleta, CA, United States_.
+
+### Programming Languages
+I have worked with many programming languages. A non-exhaustive list, loosely in order of preference:
+
+- Kotlin
+- Java
+- TypeScript
+- Sass
+- HTML 5
+- Python
+- Bash / Zshell / sh
+- ANTLR 4
+- Groovy
+- CSS
+- Ruby
+- Lua
+- JavaScript
+- Batch files (`.bat`)
+- PHP
+- C / C++ (only reading, not good at writing)
+
+### Video Games
+I play quite a few video games. Some of my favorites include (in alphabetical order):
+
+- Baba is You
+- Black Mesa
+- Destiny 2
+- Factorio
+- Fire Emblem: Three Houses
+- Half-Life Series
+- Minecraft
+- Portal Series
+- SCP: Secret Laboratory
+- Sid Meier's Civilization V
+- Super Smash Brothers Ultimate
+- Tabletop Simulator
+- Team Fortress 2
+- Transport Fever 2
+- Xenoblade Chronicles 2
