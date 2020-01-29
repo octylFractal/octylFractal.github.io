@@ -1,1 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Fira+Code&display=swap');
+
+.wait-for-icons {
+  visibility: hidden;
+}
+
+.fontawesome-i2svg-active .wait-for-icons {
+  visibility: initial;
+}
