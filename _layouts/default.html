@@ -25,10 +25,13 @@
     <!-- FontAwesome -->
     <script defer src="https://kit.fontawesome.com/89723ff644.js" crossorigin="anonymous"></script>
 </head>
-<body>
+<body class="min-vh-100 d-flex flex-column">
 {% include navbar.html %}
-<div class="container p-3">
+<div class="container p-3 flex-grow-1 flex-shrink-0" style="flex-basis: auto">
     {{ content }}
+</div>
+<div class="flex-shrink-0">
+{% include footer.html %}
 </div>
 </body>
 </html>
