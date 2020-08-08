@@ -12,3 +12,4 @@ I host a few public services / files. The services' status can be checked by cli
 - Two classic version schemes
     - [DroneVer](/drone-ver/)
     - [TenVer](/tenver/)
+- [Git Partitioning](https://octyl.net/GitPartitioning/), a new `git` branch management scheme
