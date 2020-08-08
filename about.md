@@ -33,13 +33,18 @@ I have worked with many programming languages. A non-exhaustive list, loosely in
 ### Video Games
 I play quite a few video games. Some of my favorites include (in alphabetical order):
 
+- Astroneer
 - Baba is You
 - Black Mesa
-- Destiny 2
+- Borderlands Series
+- Detroit: Become Human
 - Factorio
+- Factory Town
 - Fire Emblem: Three Houses
 - Half-Life Series
 - Minecraft
+- Persona Series
+  - Maybe SMT too, but I haven't played yet!
 - Portal Series
 - SCP: Secret Laboratory
 - Sid Meier's Civilization V
