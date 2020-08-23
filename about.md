@@ -43,11 +43,15 @@ I play quite a few video games. Some of my favorites include (in alphabetical or
 - Fire Emblem: Three Houses
 - Half-Life Series
 - Minecraft
+- Monster Hunter: World
 - Persona Series
   - Maybe SMT too, but I haven't played yet!
 - Portal Series
 - SCP: Secret Laboratory
 - Sid Meier's Civilization V
+- Splatoon 2
+  - Didn't play Splatoon, but it's probably good too
+- Spore
 - Super Smash Brothers Ultimate
 - Tabletop Simulator
 - Team Fortress 2
