@@ -15,7 +15,7 @@ The internet home of Octavia Togami, also known as:
     - Includes the rest of the StackExchange network as well
 - @kenzierocks on
   - [Keybase](https://keybase.io/kenzierocks)
-- octylFractal#1861 on
+- octylFractal#6174 on
   - [Discord](https://discordapp.com/)
 
 Want to [know more](/about/)?
