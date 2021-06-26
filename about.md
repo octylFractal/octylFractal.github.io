@@ -13,9 +13,10 @@ I currently reside in: _Carpenteria, CA, United States_.
 ### Programming Languages
 I have worked with many programming languages. A non-exhaustive list, loosely in order of preference:
 
-- Kotlin
-- Java
+- Java (>=11)
 - Rust
+- Kotlin
+- Java (<11)
 - TypeScript
 - Sass
 - HTML 5
@@ -46,11 +47,14 @@ I play quite a few video games. Some of my favorites include (in alphabetical or
 - FFXIV
 - Fire Emblem: Three Houses
 - Half-Life Series
+- It Takes Two
 - Minecraft
 - Monster Hunter: World
+- Payday 2
 - Persona Series
   - Maybe SMT too, but I haven't played yet!
 - Portal Series
+- SAO Fatal Bullet
 - SCP: Secret Laboratory
 - Sid Meier's Civilization V
 - Splatoon 2
