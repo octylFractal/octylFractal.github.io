@@ -6,14 +6,6 @@
   }
 }
 
-@function brighten-all($colors, $amount) {
-  $new-colors: [];
-  @each $color in $colors {
-    $new-colors: append($new-colors, adjust-color($color, $lightness: $amount));
-  }
-  @return $new-colors;
-}
-
 .rainbow {
   & > * {
     display: inline-block;
@@ -25,12 +17,12 @@
 }
 
 .rainbow-full {
-  @include define-rainbow(brighten-all([
-    #e40303,
-    #ff8c00,
+  @include define-rainbow([
+    #FC5656,
+    #FF9008,
     #ffed00,
-    #008026,
-    #004dff,
-    #750787,
-  ], 15%));
+    #00C83B,
+    #86ABFF,
+    #E986F9,
+  ]);
 }
