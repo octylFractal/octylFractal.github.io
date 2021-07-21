@@ -1,18 +1,36 @@
+@mixin define-rainbow($rainbow-colors) {
+  @for $i from 1 through length($rainbow-colors) {
+    & > :nth-child(#{length($rainbow-colors)}n+#{$i % length($rainbow-colors)}) {
+      color: #{nth($rainbow-colors, $i)};
+    }
+  }
+}
+
+@function brighten-all($colors, $amount) {
+  $new-colors: [];
+  @each $color in $colors {
+    $new-colors: append($new-colors, adjust-color($color, $lightness: $amount));
+  }
+  @return $new-colors;
+}
 
 .rainbow {
   & > * {
     display: inline-block;
   }
+}
 
-  & > :nth-child(3n+1) {
-    color: #be9fe1;
-  }
+.rainbow-purple {
+  @include define-rainbow([#be9fe1, #c9b6e4, #e1ccec]);
+}
 
-  & > :nth-child(3n+2) {
-    color: #c9b6e4;
-  }
-
-  & > :nth-child(3n) {
-    color: #e1ccec;
-  }
+.rainbow-full {
+  @include define-rainbow(brighten-all([
+    #e40303,
+    #ff8c00,
+    #ffed00,
+    #008026,
+    #004dff,
+    #750787,
+  ], 15%));
 }

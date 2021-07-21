@@ -36,5 +36,13 @@
 <div class="flex-shrink-0">
 {% include footer.html %}
 </div>
+<script>
+    if (window.location.hostname.endsWith(".gay") || window.location.hash === "#gay") {
+        for (let elem of document.getElementsByClassName("rainbow")) {
+            elem.classList.remove("rainbow-purple");
+            elem.classList.add("rainbow-full");
+        }
+    }
+</script>
 </body>
 </html>

@@ -1,7 +1,7 @@
 {% comment %} Takes in {{ text }}, the text to rainbowify. Outputs spans accordingly. {% endcomment %}
 
 <span class="sr-only">{{ include.text }}</span>
-<span class="rainbow" aria-hidden="true">
+<span class="rainbow rainbow-purple" aria-hidden="true">
     {% assign chars = include.text | split: '' %}
     {% for char in chars %}<span>{{ char }}</span>{% endfor %}
 </span>
