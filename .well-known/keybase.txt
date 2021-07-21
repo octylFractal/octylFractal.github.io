@@ -134,4 +134,59 @@ appending to this document.
 View my publicly-auditable identity here: https://keybase.io/kenzierocks
 
 ==================================================================
+==================================================================
+https://keybase.io/kenzierocks
+--------------------------------------------------------------------
 
+I hereby claim:
+
+  * I am an admin of https://octyl.gay
+  * I am kenzierocks (https://keybase.io/kenzierocks) on keybase.
+  * I have a public key ASCRxL2Q5sAdw4bI7jpNRSKshdC8t5w5P6cvLcSSTbXvqQo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0101a990171630b240d8775234f69dd1312ad05653bd6f0287325958c03b9e610ffb0a",
+      "host": "keybase.io",
+      "kid": "012091c4bd90e6c01dc386c8ee3a4d4522ac85d0bcb79c393fa72f2dc4924db5efa90a",
+      "uid": "dab7c583e77ee5130eb7584a56231a19",
+      "username": "kenzierocks"
+    },
+    "merkle_root": {
+      "ctime": 1626852441,
+      "hash": "3bb63cd0771bcdffbe125e000bc19c3fc1f8b23fc183fb591d91038e31267f394c4b3b30f322767d4c4f900f9f4a5820615381f89a58e74d6b1d15d179730e58",
+      "hash_meta": "bcd56a84d9fac6840d024ce627cb55b61a5726df4e20138c6ef86d9e3bec32fe",
+      "seqno": 20416134
+    },
+    "service": {
+      "entropy": "X1jc7YUg3Q1mGritjr8HWnlZ",
+      "hostname": "octyl.gay",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "5.7.1"
+  },
+  "ctime": 1626852468,
+  "expire_in": 504576000,
+  "prev": "8346d49f7f793df6daaa1069faf9e4d003a52a7c2a08a4c9dfcb2a2a31c943f0",
+  "seqno": 138,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgkcS9kObAHcOGyO46TUUirIXQvLecOT+nLy3Ekk2176kKp3BheWxvYWTES5cCzIrEIING1J9/eT322qoQafr55NADpSp8Kgikyd/LKioxyUPwxCChM/L5wGB17WEkhIrgaATTTQjR03JOqvjaJknQVYnGQAIBwqNzaWfEQOTkrqhmh/WIYLFNj8BRhOf+FiOaJ7yMrTnr1zwQ/6d9kpdjxMIsJEsyS4yO0ut3b22bfc5B8vQrnvpOwLcapAOoc2lnX3R5cGUgpGhhc2iCpHR5cGUIpXZhbHVlxCAtdZy+/9sYs1LAbCa1mhJQLRl+iU8Xszud/tGL6gI8RaN0YWfNAgKndmVyc2lvbgE=
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/kenzierocks
+
+==================================================================
