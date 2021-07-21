@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Bootstrap 5, et. al"
-date: 2020-07-21 00:12:36 -0700
+date: 2021-07-21 00:12:36 -0700
 ---
 
 I've updated the site to Bootstrap 5, as well as updating some other dependencies. Let me know if anything seems broken.
