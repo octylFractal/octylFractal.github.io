@@ -49,11 +49,16 @@ I play quite a few video games. Some of my favorites include (in alphabetical or
 - Fire Emblem: Three Houses
 - Half-Life Series
 - It Takes Two
+- Jackbox Party Packs
+- Marble Blast Gold
 - Minecraft
 - Monster Hunter: World
+- Monster Prom & Monster Camp
 - Payday 2
 - Persona Series
   - Maybe SMT too, but I haven't played yet!
+- Pokémon Legends: Arceus
+  - The other Pokémon games aren't my cup of tea.
 - Portal Series
 - SAO Fatal Bullet
 - SCP: Secret Laboratory
