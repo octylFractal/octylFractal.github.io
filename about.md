@@ -13,7 +13,7 @@ I currently reside in: _Carpenteria, CA, United States_.
 ### Programming Languages
 I have worked with many programming languages. A non-exhaustive list, loosely in order of preference:
 
-- Java (>=11)
+- Java (≥11)
 - Rust
 - Kotlin
 - Java (<11)
