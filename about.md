@@ -32,6 +32,7 @@ I have worked with many programming languages. A non-exhaustive list, loosely in
 - Batch files (`.bat`)
 - PHP
 - C / C++ (only reading, not good at writing)
+- Brainf***
 
 ### Video Games
 I play quite a few video games. Some of my favorites include (in alphabetical order):
