@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code&family=Fira+Mono&display=swap');
+@import "jb_mono";
 
 .wait-for-icons {
   visibility: hidden;
@@ -6,4 +6,8 @@
 
 .fontawesome-i2svg-active .wait-for-icons {
   visibility: initial;
+}
+
+:root {
+  font-variant-ligatures: none;
 }

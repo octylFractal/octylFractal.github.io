@@ -8,7 +8,7 @@ Hi! I'm Octavia Togami, a front-end / back-end software engineer with experience
 [my own projects](https://github.com/octylFractal). I also provide software mentoring to students that are a part of
 FIRST® Robotics Team 5818, [Riviera Robotics](https://www.rivierarobotics.org/).
 
-I currently reside in: _Carpenteria, CA, United States_.
+I currently reside in: _Carpinteria, CA, United States_.
 
 ### Programming Languages
 I have worked with many programming languages. A non-exhaustive list, loosely in order of preference:
