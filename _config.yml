@@ -2,14 +2,21 @@ title: '@octylFractal'
 email: octavia.togami@gmail.com
 baseurl: "/"
 url: "https://octyl.net"
+author: Octavia Togami
+description: The internet home of Octavia Togami
 
-# Special variables:
 github_username: octylFractal
+
+# It just works.
+timezone: UTC
 
 permalink: /:categories/:year/:month/:day/:title/
 
 sass:
   style: compressed
+
+plugins:
+  - jekyll-feed
 
 exclude:
   - .idea
