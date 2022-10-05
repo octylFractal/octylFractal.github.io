@@ -10,6 +10,7 @@ The internet home of Octavia Togami, also known as:
   - <span class="fa-brands fa-youtube fa-fw"></span> [YouTube](https://www.youtube.com/channel/UCJqrDfnNLnfmre6QiZjdkCw)
   - <span class="fa-sharp fa-solid fa-user-robot fa-fw"></span> [ChiefDelphi](https://www.chiefdelphi.com/u/octylFractal/)
   - <span class="fa-brands fa-twitter fa-fw"></span> [Twitter](https://twitter.com/octylFractal)
+  - <span class="fa-brands fa-mastodon fa-fw"></span> <a rel="me" href="https://pony.social/@octylFractal">pony.social</a>
 - <span class="text-info">Octavia Togami</span> on
   - <span class="fa-brands fa-stack-overflow fa-fw"></span> [StackOverflow](https://stackoverflow.com/users/436524/octavia-togami)
     - Includes the rest of the [StackExchange network](https://stackexchange.com/users/194284/octavia-togami) as well
