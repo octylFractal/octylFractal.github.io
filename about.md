@@ -10,7 +10,7 @@ FIRST® Robotics Team 5818, [Riviera Robotics](https://www.rivierarobotics.org/)
 
 I currently reside in: _Carpinteria, CA, United States_.
 
-### Programming Languages
+## Programming Languages
 I have worked with many programming languages. A non-exhaustive list, loosely in order of preference:
 
 - Java (≥11)
@@ -34,7 +34,7 @@ I have worked with many programming languages. A non-exhaustive list, loosely in
 - C / C++ (only reading, not good at writing)
 - Brainf***
 
-### Video Games
+## Video Games
 I play quite a few video games. Some of my favorites include (in alphabetical order):
 
 - Astroneer
