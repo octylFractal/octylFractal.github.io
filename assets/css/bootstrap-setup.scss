@@ -8,7 +8,6 @@ $navbar-padding-y: 0.5rem !default;
 $font-family-sans-serif: 'JetBrains Mono', monospace, Lato, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
 $font-family-monospace: 'JetBrains Mono', SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 
-$cyan: #79CCFF;
 $green: #58EEC6;
 
 $rain-forest: #1d4f37;
@@ -17,6 +16,7 @@ $body-bg: darken($rain-forest, 10%);
 $secondary: $rain-forest;
 $dark: darken($rain-forest, 5%);
 $code-color: #F292BE;
+$text-muted: #adb5bd;
 
 @import "bootswatch_variables";
 @import "bootstrap/bootstrap";
