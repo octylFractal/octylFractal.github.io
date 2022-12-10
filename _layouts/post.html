@@ -2,33 +2,27 @@
 layout: page
 ---
 <div class="card">
-    <div class="card-header d-flex justify-content-between">
-        <h2 class="h4">{{ page.title }}</h2>
-        <div class="row justify-content-center text-center">
-            <div class="col col-auto">
-                <span class="text-muted">posted on {{ page.date | date: "%F at %T %z" }}</span>
+    <div class="card-header">
+        <nav class="d-flex justify-content-between align-items-center" aria-label="Post navigation">
+            <div class="me-3">
+                {% include pagination-button.html direction="left" title="Previous Post" url=page.previous.url %}
             </div>
-            <div class="col col-auto">
-                <div>
-                    <a href="/feed.xml" class="btn btn-sm btn-primary"><span class="fa-solid fa-rss"
-                                                                             title="Atom/RSS Feed"></span></a>
-                </div>
+            <h2 class="h4 flex-grow-1 mb-0 me-3 text-break">{{ page.title }}</h2>
+            <div>
+                {% include pagination-button.html direction="right" title="Next Post" url=page.next.url %}
             </div>
-        </div>
+        </nav>
     </div>
     <div class="card-body">
         {{ content }}
     </div>
     <div class="card-footer">
-        <nav aria-label="Post navigation">
-            <div class="d-flex justify-content-between">
-                <div>
-                    {% include pagination-button.html title="Previous" url=page.previous.url %}
-                </div>
-                <div>
-                    {% include pagination-button.html title="Next" url=page.next.url %}
-                </div>
+        <div class="d-flex justify-content-between">
+            <span class="text-muted">posted on {{ page.date | date: "%F at %T %z" }}</span>
+            <div>
+                <a href="/feed.xml" class="btn btn-primary"><span class="fa-solid fa-rss"
+                                                                  title="Atom/RSS Feed"></span></a>
             </div>
-        </nav>
+        </div>
     </div>
 </div>

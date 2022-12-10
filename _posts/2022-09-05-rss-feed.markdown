@@ -5,5 +5,5 @@ date: 2022-09-05 12:18:54 -0700
 ---
 
 At the request of an anonymous reader, I've added an RSS feed for my blog posts. It's linked from the
-[main blog index](/blog/), as well as each individual post. You can see it on this one in the top-right, it looks like
-this: <a href="#" class="btn btn-sm btn-primary"><span class="fa-solid fa-rss" title="Atom/RSS Feed"></span></a>
+[main blog index](/blog/), as well as each individual post. You can see it on this one in the bottom-right, it looks
+like this: <a href="#" class="btn btn-primary"><span class="fa-solid fa-rss" title="Atom/RSS Feed"></span></a>
