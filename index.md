@@ -5,7 +5,7 @@ title: Home
 The internet home of Octavia Togami, also known as:
 
 - <span class="text-info">@octylFractal</span> on
-  - <span class="fa-brands fa-github fa-fw"></span> [GitHub](https://github.com/octylFractal)
+  - <span class="fa-brands fa-github fa-fw"></span> [GitHub](https://github.com/octylFractal) (You can [sponsor](https://github.com/sponsors/octylFractal) me here!)
   - <span class="fa-layers fa-fw"><span class="fa-regular fa-square"></span><span class="fa-solid fa-gear" data-fa-transform="shrink-7"></span></span> [Factorio Mods](https://mods.factorio.com/user/octylFractal)
   - <span class="fa-brands fa-youtube fa-fw"></span> [YouTube](https://www.youtube.com/@octylFractal)
   - <span class="fa-sharp fa-solid fa-user-robot fa-fw"></span> [ChiefDelphi](https://www.chiefdelphi.com/u/octylFractal/)
@@ -18,5 +18,7 @@ The internet home of Octavia Togami, also known as:
   - <span class="fa-brands fa-keybase fa-fw"></span> [Keybase](https://keybase.io/kenzierocks)
 - <span class="text-info">octylFractal#6174</span> on
   - <span class="fa-brands fa-discord"></span> [Discord](https://discordapp.com/)
+- <span class="text-info">octavia.togami</span>@
+  - <span class="fa-sharp fa-solid fa-envelope fa-fw"></span> [gmail.com](mailto:octavia.togami@gmail.com)
 
 Want to [know more](/about/)?
