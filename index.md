@@ -16,7 +16,7 @@ The internet home of Octavia Togami, also known as:
     - Includes the rest of the [StackExchange network](https://stackexchange.com/users/194284/octavia-togami) as well
 - <span class="text-info">@kenzierocks</span> on
   - <span class="fa-brands fa-keybase fa-fw"></span> [Keybase](https://keybase.io/kenzierocks)
-- <span class="text-info">octylFractal#6174</span> on
+- <span class="text-info">octylFractal#8128</span> on
   - <span class="fa-brands fa-discord"></span> [Discord](https://discordapp.com/)
 - <span class="text-info">octavia.togami</span>@
   - <span class="fa-sharp fa-solid fa-envelope fa-fw"></span> [gmail.com](mailto:octavia.togami@gmail.com)
