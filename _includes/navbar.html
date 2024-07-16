@@ -14,16 +14,16 @@
         </button>
 
         <div class="collapse navbar-collapse" id="global-navbar">
-            <ul class="navbar-nav mr-auto">
+            <ul class="navbar-nav mr-auto nav-underline">
                 {% for navpage in site.data.navbar %}
-                {% assign class_names = "nav-item" %}
+                {% assign class_names = "nav-link" %}
                 {% assign sr_current = "" %}
                 {% if navpage.url == page.url %}
                 {% assign class_names = class_names | append: " active" %}
                 {% assign sr_current = '<span class="sr-only">(current)</span>' %}
                 {% endif %}
-                <li class="{{ class_names }}">
-                    <a class="nav-link" href="{{ navpage.url }}">
+                <li class="nav-item">
+                    <a class="{{ class_names }}" href="{{ navpage.url }}">
                         {{ navpage.title }}{{ sr_current }}
                         {% if navpage.external %}
                         <span class="fa-solid fa-external-link"></span>
