@@ -1,0 +1,80 @@
+# Schema:
+# title: string, the title of the project
+# description: string, a brief description of the project
+# flavor-color: optional string, a color used to help differentiate the project
+# links: list of { text: string, url: string }, links to the project's various web presences
+- title: OurTwobe
+  description: A YouTube Discord bot with a dedicated web UI. This allows a much richer interface.
+  flavor-color: "#cf3427"
+  links:
+    - text: Source
+      url: https://github.com/octylFractal/OurTwobe
+- title: last-legend-dob
+  description: A tool using `binrw` to read FFXIV data files.
+  links:
+    - text: Source
+      url: https://github.com/octylFractal/last-legend-dob
+- title: dedupetool
+  description: >
+    A tool for deduplicating files based on their contents using `FIDEDUPERANGE`, a feature supported by
+    filesystems like Btrfs and XFS.
+  links:
+    - text: Source
+      url: https://github.com/octylFractal/dedupetool/
+- title: java-preloader-reloadeder
+  description: >
+    Just another JDK management tool? No, this one features the special ability to have different JDKs per-shell,
+    without any complicated shell installation! Just a few `export` commands and you're good to go.
+  links:
+    - text: Source
+      url: https://github.com/octylFractal/java-preloader-reloadeder
+- title: audio-bicycle
+  description: >
+    A two-way audio communicator that uses
+    [the VBAN protocol (pdf)](https://vb-audio.com/Voicemeeter/VBANProtocol_Specifications.pdf) to pass audio to another
+    computer.
+  links:
+    - text: Source
+      url: https://github.com/octylFractal/audio-bicycle
+- title: stacked-portrayals
+  description: A tool for mapping Minecraft stacktraces.
+  flavor-color: "#458ec7" # "Minecraft"-ish blue
+  links:
+    - text: Source
+      url: https://github.com/octylFractal/stacked-portrayals
+- title: netherfire
+  description: >
+    A Minecraft modpack automation tool. Can output both CurseForge and Modrinth modpacks, as well as a
+    server folder, with the ability to cross-bundle mods and include other files.
+  flavor-color: "#458ec7" # "Minecraft"-ish blue
+  links:
+    - text: Source
+      url: https://github.com/octylFractal/netherfire
+- title: StellatedRoller
+  description: >
+    A hypotrochoid animation visualizer. Inspired by Mathologer's video on
+    [The 3-4-7 miracle](https://www.youtube.com/watch?v=oEN0o9ZGmOM).
+  flavor-color: "#000" # This project has a completely black background, so I guess it's fitting
+  links:
+    - text: Source
+      url: https://github.com/octylFractal/StellatedRoller
+- title: DownloadAnyKey.com
+  description: A site for downloading an Any Key, because apparently no one has one?
+  flavor-color: "#aaa" # Gotta get that off-grey key color!
+  links:
+    - text: Site
+      url: https://downloadanykey.com/
+    - text: Source
+      url: https://github.com/octylFractal/downloadanykey.com
+- title: "`Box<dyn Dns>`"
+  description: >
+    A dynamic DNS manager. Resolves the current public IP and sets a DNS record to that value. CloudFlare only.
+  flavor-color: "#f88201" # CloudFlare orange
+  links:
+    - text: Source
+      url: https://github.com/octylFractal/box-dyn-dns
+- title: beat-dropper
+  description: A program for manipulating audio beats, or just time sections in general.
+  links:
+    - text: Source
+      url: https://github.com/octylFractal/beat-dropper
