@@ -1,0 +1,6 @@
+{% comment %} Defers the CSS in the URL {{ url }} in a no-script compatible way. {% endcomment %}
+
+{% capture common_attrs %}crossorigin="anonymous" href="{{ include.url }}"{% endcapture %}
+
+<link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" {{ common_attrs }}>
+<noscript><link rel="stylesheet" {{ common_attrs }} ></noscript>
