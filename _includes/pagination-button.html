@@ -1,9 +1,9 @@
 {% if include.url %}
-<a class="btn bg-primary" href="{{ include.url }}">
+<a class="btn bg-primary" href="{{ include.url }}" aria-label="{{ include.title }}">
     <span class="fa-solid fa-chevron-{{ include.direction }}" title="{{ include.title }}"></span>
 </a>
 {% else %}
-<a class="btn bg-primary disabled" href="javascript:void 0" tabindex="-1" aria-disabled="true">
+<a class="btn invisible disabled border-0" href="javascript:void 0" tabindex="-1" aria-disabled="true">
     <span class="fa-solid fa-chevron-{{ include.direction }}" title="{{ include.title }}"></span>
 </a>
 {% endif %}
