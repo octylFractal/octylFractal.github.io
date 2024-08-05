@@ -4,3 +4,6 @@ _site
 .jekyll-metadata
 /vendor
 node_modules
+
+# This data is not sensitive, but it is specific to the environment.
+/_data/env.yml

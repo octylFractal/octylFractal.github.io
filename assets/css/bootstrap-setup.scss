@@ -1,12 +1,17 @@
 ---
 ---
 
+{% if site.data.env.berkeley-mono-base %}
+$bk-font-base: "{{ site.data.env.berkeley-mono-base }}";
+@import "berkeley_mono";
+{% endif %}
+
 @import "fonts";
 
 $navbar-padding-y: 0.5rem !default;
 
-$font-family-sans-serif: 'JetBrains Mono', monospace, Lato, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
-$font-family-monospace: 'JetBrains Mono', SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+$font-family-sans-serif: 'Berkeley Mono', 'JetBrains Mono', monospace, Lato, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+$font-family-monospace: 'Berkeley Mono', 'JetBrains Mono', SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 
 $green: #58EEC6;
 
