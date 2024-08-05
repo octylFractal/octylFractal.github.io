@@ -22,6 +22,7 @@ exclude:
   - .idea
   - Gemfile
   - Gemfile.lock
+  - gemset.nix
   - vendor/bundle/
   - vendor/cache/
   - vendor/gems/
