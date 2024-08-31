@@ -8,12 +8,18 @@
                 {% include rainbowify.html text=site.title %}
             </h1>
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#global-navbar"
-                aria-controls="global-navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <button id="global-navbar-toggler" class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#global-navbar" aria-controls="global-navbar" aria-expanded="true"
+                aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse" id="global-navbar">
+        <div class="collapse navbar-collapse show" id="global-navbar">
+            <script type="text/javascript">
+                // Purposefully render blocking to collapse the navbar before it renders in the case of JS-enabled
+                document.getElementById("global-navbar-toggler").ariaExpanded = "false";
+                document.getElementById("global-navbar").classList.remove("show");
+            </script>
             <ul class="navbar-nav mr-auto nav-underline">
                 {% for navpage in site.data.navbar %}
                 {% assign class_names = "nav-link" %}
