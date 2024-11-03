@@ -13,4 +13,4 @@ I host a few public services / files.
 - Two classic version schemes
     - [DroneVer](/drone-ver/)
     - [TenVer](/tenver/)
-- [Git Partitioning](https://octyl.net/GitPartitioning/), a new `git` branch management scheme
+- [Git Partitioning](https://octylfractal.github.io/GitPartitioning/), a new `git` branch management scheme
