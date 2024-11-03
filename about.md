@@ -42,16 +42,21 @@ I play quite a few video games. Some of my favorites include (in alphabetical or
 - Baldur's Gate 3
 - Black Mesa
 - Borderlands Series
+- Deadlock
 - Deep Rock Galactic
 - Deep Rock Galactic Survivor
 - Detroit: Become Human
 - Dyson Sphere Program
 - Factorio
+  - And Space Age!
 - Factory Town
 - FFXIV
+- FFXVI (TORGAL, KILL!)
 - Fire Emblem: Three Houses
 - Foundation
+- Hades I & II
 - Half-Life Series
+- Hollow Knight
 - Infraspace
 - It Takes Two
 - Jackbox Party Packs
@@ -79,4 +84,5 @@ I play quite a few video games. Some of my favorites include (in alphabetical or
 - Team Fortress 2
 - The Talos Principle 2
 - Transport Fever 2
+- Warframe
 - Xenoblade Chronicles Series
