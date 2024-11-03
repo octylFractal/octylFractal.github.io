@@ -34,11 +34,6 @@ jobs:
         run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
         env:
           JEKYLL_ENV: production
-      - name: Build and store ZIP artifact
-        run: |
-          cd _site
-          zip -r ../_site.zip .
-          mv ../_site.zip .
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v1
   deploy:
