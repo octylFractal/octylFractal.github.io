@@ -1,0 +1,7 @@
+---
+---
+
+{% if site.data.env.berkeley-mono-base %}
+$bk-font-base: "{{ site.data.env.berkeley-mono-base }}";
+@import "berkeley_mono";
+{% endif %}

@@ -21,12 +21,18 @@
     <meta property="og:url" content="{{ site.url }}{{ page.url }}">
     <meta property="og:image" content="/assets/images/og_image.png">
 
+    <!-- Font CSS -->
+    {% if site.data.env.berkeley-mono-base %}
+        <link rel="stylesheet" href="/assets/css/berkeley-mono-include.css" crossorigin="anonymous">
+    {% endif %}
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="/assets/css/bootstrap-setup.css" crossorigin="anonymous">
 
     <!-- Lower-priority personalization CSS -->
     {% include defer-css.html url="/assets/css/rainbow.css" %}
     {% include defer-css.html url="/assets/css/tiling.css" %}
+    {% include defer-css.html url="/assets/css/code-blocks.css" %}
 
     <!-- FontAwesome CSS -->
     <link rel="stylesheet" href="/assets/css/fontawesome.css" crossorigin="anonymous">
@@ -43,9 +49,7 @@
 {% include navbar.html %}
 <div id="main-and-bordering" class="flex-grow-1 d-flex">
     <div class="bg-tiled flex-grow-1"></div>
-    <main id="main" class="container shadow p-3 px-5" style="flex-basis: auto">
-        {{ content }}
-    </main>
+    {{ content }}
     <div class="bg-tiled flex-grow-1"></div>
 </div>
 <div class="flex-shrink-0">

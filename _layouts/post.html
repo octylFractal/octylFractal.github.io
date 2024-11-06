@@ -1,13 +1,13 @@
 ---
-layout: page
+layout: default
 ---
-<div class="card">
-    <div class="card-header">
+<main id="main" class="container card shadow p-0 border-0 rounded-0" style="flex-basis: auto">
+    <div class="card-header border-0 rounded-0">
         <nav class="d-flex justify-content-between align-items-center" aria-label="Post navigation">
             <div class="me-3">
                 {% include pagination-button.html direction="left" title="Previous Post" url=page.previous.url %}
             </div>
-            <h2 class="h4 flex-grow-1 mb-0 me-3 text-break">{{ page.title }}</h2>
+            <h2 class="flex-grow-1 mb-0 me-3 text-break">{{ page.title }}</h2>
             <div>
                 {% include pagination-button.html direction="right" title="Next Post" url=page.next.url %}
             </div>
@@ -16,13 +16,14 @@ layout: page
     <div class="card-body">
         {{ content }}
     </div>
-    <div class="card-footer">
+    <div class="card-footer border-0 rounded-0">
         <div class="d-flex justify-content-between">
-            <span class="text-muted">posted on {{ page.date | date: "%F at %T %z" }}</span>
+            <span class="text-muted">posted on<br><code>{{ page.date | date: "%F at %T %z" }}</code></span>
             <div>
                 <a href="/feed.xml" class="btn btn-primary"><span class="fa-solid fa-rss"
                                                                   title="Atom/RSS Feed"></span> RSS</a>
             </div>
         </div>
     </div>
-</div>
+</main>
+
