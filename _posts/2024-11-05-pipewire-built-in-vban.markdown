@@ -41,6 +41,10 @@ sess.min-ptime = 0
 
 ### Miscellaneous
 
+I needed to increase the quantum in order to prevent certain applications from not having enough buffer, like `mpv`.
+Putting `node.force-quantum = 512` on each module's stream seemed to be enough, but this is likely
+environment-dependent.
+
 Finally, I had to set `node.always-process = true` on both modules to ensure that the audio was always being sent and
 received. This is because the modules will stop processing audio if there is no stream connected otherwise, and this
 can cause noise when starting a new stream. This made noticeable pops when starting music or skipping tracks, which
@@ -61,7 +65,9 @@ context.modules = [
             stream.props = {
                 media.class = "Audio/Source"
                 node.name = "VBAN Mic"
+                node.description = "VBAN Mic"
                 node.always-process = true
+                node.force-quantum = 512
             }
         }
     }
@@ -78,7 +84,9 @@ context.modules = [
             stream.props = { 
                 media.class = "Audio/Sink"
                 node.name = "VBAN Speakers"
+                node.description = "VBAN Speakers"
                 node.always-process = true
+                node.force-quantum = 512
             }   
         }   
     }
