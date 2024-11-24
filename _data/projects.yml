@@ -75,7 +75,7 @@
     A two-way audio communicator that uses
     [the VBAN protocol (pdf)](https://vb-audio.com/Voicemeeter/VBANProtocol_Specifications.pdf) to pass audio to another
     computer.
-  deprecated: because of [PipeWire's built-in VBAN support]({% link _posts/2024-11-05-pipewire-built-in-vban.markdown %})
+  deprecated: because of [PipeWire's built-in VBAN support](/2024/11/05/pipewire-built-in-vban/)
   links:
     - text: Source
       url: https://github.com/octylFractal/audio-bicycle
