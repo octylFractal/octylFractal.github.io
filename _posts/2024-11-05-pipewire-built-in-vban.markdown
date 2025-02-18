@@ -4,6 +4,8 @@ title: "PipeWire has built-in VBAN support!"
 date: 2024-11-05 15:30:19 -0800
 ---
 
+Updated Feb 02 2025.
+
 ### RIP `audio-bicycle`, 2022-2024
 
 I recently went to make some changes to my old project, audio-bicycle, but I found that it was no longer necessary!
@@ -24,8 +26,10 @@ and setting the VBAN modules to match, or at least transferring S24LE audio. Her
 audio.format = "S24LE"
 audio.rate = 48000
 ```
-You should also make sure that VoiceMeeter is configured to use the same settings on its sending side, as PipeWire will
-not check or do any conversion for you :(.
+~~You should also make sure that VoiceMeeter is configured to use the same settings on its sending side, as PipeWire will
+not check or do any conversion for you :(.~~ \[2025-17-02] I believe this is no longer the case as of
+[this commit](https://gitlab.freedesktop.org/pipewire/pipewire/-/commit/1a5514e5cf406284f3f7e9466ac630eb64004af3), but
+I don't think it's released anywhere yet.
 
 ### Latency
 
@@ -33,23 +37,25 @@ PipeWire's VBAN modules also pick very high latency numbers, presumably because 
 internet. I adjusted these down for the very low latency I have on my local network:
 ```
 # For send and recv, keeps a smaller buffer.
-sess.latency.msec = 1
+sess.latency.msec = 2
 
 # For send only, minimizes the time between packets
-sess.min-ptime = 0
+sess.min-ptime = 1
 ```
 
 ### Miscellaneous
 
-I needed to increase the quantum in order to prevent certain applications from not having enough buffer, like `mpv`.
+~~I needed to increase the quantum in order to prevent certain applications from not having enough buffer, like `mpv`.
 Putting `node.force-quantum = 512` on each module's stream seemed to be enough, but this is likely
-environment-dependent.
+environment-dependent.~~
 
-Finally, I had to set `node.always-process = true` on both modules to ensure that the audio was always being sent and
+~~Finally, I had to set `node.always-process = true` on both modules to ensure that the audio was always being sent and
 received. This is because the modules will stop processing audio if there is no stream connected otherwise, and this
 can cause noise when starting a new stream. This made noticeable pops when starting music or skipping tracks, which
 was very annoying. I assume the same could occur with the microphone, but I haven't tested it. The cost of ~3% of one
-CPU core is worth it to me to avoid this noise.
+CPU core is worth it to me to avoid this noise.~~
+
+\[2025-17-02] None of this is necessary now, due to many improvements in Pipewire. It's working fine on 1.2.7.
 
 For reference, here's my final configuration file `01-audio-bicycle.conf`:
 ```
@@ -58,16 +64,14 @@ context.modules = [
         name = libpipewire-module-vban-recv
         args = {
             source.ip = 10.190.229.127
-            sess.latency.msec = 1
+            sess.latency.msec = 10
             sess.name = "audio-bicycle"
-            audio.format = "S24LE"
+            audio.format = "S24LE" # [2025-17-02] This and `audio.rate` might not be necessary soon.
             audio.rate = 48000
             stream.props = {
                 media.class = "Audio/Source"
                 node.name = "VBAN Mic"
                 node.description = "VBAN Mic"
-                node.always-process = true
-                node.force-quantum = 512
             }
         }
     }
@@ -76,8 +80,8 @@ context.modules = [
         args = { 
             source.ip = 10.190.229.127
             destination.ip = 10.190.229.105
-            sess.min-ptime = 0
-            sess.latency.msec = 1
+            sess.min-ptime = 1
+            sess.latency.msec = 2
             sess.name = "audio-bicycle"
             audio.format = "S24LE"
             audio.rate = 48000
@@ -85,8 +89,6 @@ context.modules = [
                 media.class = "Audio/Sink"
                 node.name = "VBAN Speakers"
                 node.description = "VBAN Speakers"
-                node.always-process = true
-                node.force-quantum = 512
             }   
         }   
     }
