@@ -30,3 +30,10 @@ $text-muted: #adb5bd;
 @import "bootswatch_variables";
 @import "bootstrap/bootstrap";
 @import "bootswatch";
+
+$link-visited: #be9fe1;
+
+// Why is this necessary? Bootstrap plz.
+a:not(.nav-link):visited {
+  color: $link-visited;
+}
