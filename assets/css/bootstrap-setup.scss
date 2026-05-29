@@ -37,3 +37,9 @@ $link-visited: #be9fe1;
 a:not(.nav-link):visited {
   color: $link-visited;
 }
+
+// Reset body-bg and position to fix pretty-pattern taking the middle.
+#main {
+  background: var(--bs-body-bg);
+  position: relative;
+}

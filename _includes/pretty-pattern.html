@@ -1,0 +1,75 @@
+{% comment %}
+Generates a pretty pattern that fills its parent.
+Define {{ width }} and {{ height }} for the repeating tile grid dimensions.
+Define {{ seed }} for the RNG seed.
+{% endcomment %}
+{%- assign line_color = "#4f2980" -%}
+{%- assign width = include.width -%}
+{%- assign height = include.height -%}
+{%- assign seed = include.seed -%}
+{%- assign pattern_w = width | times: 16 -%}
+{%- assign pattern_h = height | times: 16 -%}
+{%- assign bias = 0.5 -%}
+{%- assign width_m1 = width | minus: 1 -%}
+
+{%- comment %}
+  Outer pre-pass: run the full grid with the standard (non-toroidal) constraint
+  to capture the last row. This last row is used as the toroidal prev_row when
+  the main pass processes row 1, preventing boxes at the vertical seam.
+{% endcomment -%}
+{%- assign state = seed -%}
+{%- assign pp_prev_row = "" -%}
+{%- assign pp_last_chars = "" -%}
+{%- for r in (1..height) -%}
+    {%- capture pp_row_result -%}{% include pattern-row.html state=state prev_row=pp_prev_row width=width width_m1=width_m1 bias=bias %}{%- endcapture -%}
+    {%- assign pp_row_parts = pp_row_result | strip | split: ":" -%}
+    {%- assign state = pp_row_parts | first | plus: 0 -%}
+    {%- assign pp_cur_row = pp_row_parts | last -%}
+    {%- assign pp_last_char = pp_cur_row | slice: width_m1, 1 -%}
+    {%- assign pp_last_chars = pp_last_chars | append: pp_last_char -%}
+    {%- assign pp_prev_row = pp_cur_row -%}
+{%- endfor -%}
+{%- assign wrap_row = pp_cur_row -%}
+
+{%- comment %}
+  Main pass: generate tiles and emit SVG lines.
+  - tprev: the toroidal prev_row — wrap_row for r=1, otherwise the previous main-pass row.
+  - known_last: last column character for row r, captured during the outer pre-pass.
+{% endcomment -%}
+{%- assign state = seed -%}
+{%- assign prev_row = "" -%}
+{%- assign path_d = "" -%}
+{%- for r in (1..height) -%}
+    {%- if r == 1 -%}{%- assign tprev = wrap_row -%}{%- else -%}{%- assign tprev = prev_row -%}{%- endif -%}
+    {%- assign r_m1 = r | minus: 1 -%}
+    {%- assign known_last = pp_last_chars | slice: r_m1, 1 -%}
+    {%- capture row_result -%}{% include pattern-row.html state=state prev_row=tprev width=width width_m1=width_m1 bias=bias known_last=known_last %}{%- endcapture -%}
+    {%- assign row_parts = row_result | strip | split: ":" -%}
+    {%- assign state = row_parts | first | plus: 0 -%}
+    {%- assign cur_row = row_parts | last -%}
+    {%- for c in (1..width) -%}
+        {%- assign ci = c | minus: 1 -%}
+        {%- assign ch = cur_row | slice: ci, 1 -%}
+        {%- assign lx = c | minus: 1 | times: 16 -%}
+        {%- assign ty = r | minus: 1 | times: 16 -%}
+        {%- assign rx = c | times: 16 -%}
+        {%- assign by = r | times: 16 -%}
+        {%- if ch == "l" -%}
+          {%- assign path_d = path_d | append: "M" | append: lx | append: "," | append: ty | append: "L" | append: rx | append: "," | append: by -%}
+        {%- else -%}
+          {%- assign path_d = path_d | append: "M" | append: rx | append: "," | append: ty | append: "L" | append: lx | append: "," | append: by -%}
+        {%- endif -%}
+    {%- endfor -%}
+    {%- assign prev_row = cur_row -%}
+{%- endfor -%}
+<div class="pretty-pattern">
+<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <defs>
+    <pattern id="weave-{{ seed }}" width="{{ pattern_w }}" height="{{ pattern_h }}" patternUnits="userSpaceOnUse">
+      <rect width="{{ pattern_w }}" height="{{ pattern_h }}" fill="#100a2e"/>
+      <path d="{{ path_d }}" stroke="{{ line_color }}" stroke-width="2.72" stroke-linecap="round" fill="none"/>
+    </pattern>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#weave-{{ seed }})"/>
+</svg>
+</div>

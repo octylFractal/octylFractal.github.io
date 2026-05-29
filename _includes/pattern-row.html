@@ -1,0 +1,38 @@
+{%- comment %}
+Computes one row of the weave pattern using the LCG and box-prevention constraint.
+Parameters (via include.*):
+  state      - current LCG state (integer)
+  prev_row   - previous row's characters, used for constraint checks (string)
+  width      - number of columns (integer)
+  width_m1   - width minus 1, precomputed (integer)
+  bias       - RNG threshold: rnd < bias produces "l", else "r" (float)
+  known_last - last character of this row from the non-toroidal outer pre-pass;
+               when non-empty, enables the toroidal c=1 horizontal-wrap check
+Output: "{new_state}:{row_chars}" with no surrounding whitespace.
+{% endcomment -%}
+{%- assign _state = include.state -%}
+{%- assign _prev_row = include.prev_row -%}
+{%- assign _width = include.width -%}
+{%- assign _width_m1 = include.width_m1 -%}
+{%- assign _bias = include.bias -%}
+{%- assign _known_last = include.known_last | default: "" -%}
+{%- assign _row = "" -%}
+{%- for c in (1.._width) -%}
+    {%- assign ci = c | minus: 1 -%}
+    {%- assign _state = _state | times: 1664525 | plus: 1013904223 | modulo: 4294967296 -%}
+    {%- assign rnd = _state | divided_by: 4294967296.0 -%}
+    {%- if rnd < _bias -%}{%- assign ch = "l" -%}{%- else -%}{%- assign ch = "r" -%}{%- endif -%}
+    {%- if c == 1 and _known_last != "" -%}
+        {%- assign wrap_upleft = _prev_row | slice: _width_m1, 1 -%}
+        {%- assign wrap_up = _prev_row | slice: 0, 1 -%}
+        {%- if ch == "r" and wrap_upleft == "r" and wrap_up == "l" and _known_last == "l" -%}{%- assign ch = "l" -%}{%- endif -%}
+    {%- elsif c > 1 and ch == "r" -%}
+        {%- assign cim1 = ci | minus: 1 -%}
+        {%- assign upleft = _prev_row | slice: cim1, 1 -%}
+        {%- assign up = _prev_row | slice: ci, 1 -%}
+        {%- assign left = _row | slice: cim1, 1 -%}
+        {%- if upleft == "r" and up == "l" and left == "l" -%}{%- assign ch = "l" -%}{%- endif -%}
+    {%- endif -%}
+    {%- assign _row = _row | append: ch -%}
+{%- endfor -%}
+{{- _state -}}:{{- _row -}}

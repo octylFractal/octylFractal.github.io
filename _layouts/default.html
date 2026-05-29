@@ -31,7 +31,7 @@
 
     <!-- Lower-priority personalization CSS -->
     {% include defer-css.html url="/assets/css/rainbow.css" %}
-    {% include defer-css.html url="/assets/css/tiling.css" %}
+    {% include defer-css.html url="/assets/css/pretty-pattern.css" %}
     {% include defer-css.html url="/assets/css/code-blocks.css" %}
 
     <!-- FontAwesome CSS -->
@@ -47,10 +47,9 @@
 <body class="min-vh-100 d-flex flex-column">
 <a class="sr-only sr-only-focusable" href="#main">Skip to main</a>
 {% include navbar.html %}
-<div id="main-and-bordering" class="flex-grow-1 d-flex">
-    <div class="bg-tiled flex-grow-1"></div>
+<div id="main-and-bordering" class="flex-grow-1 d-flex position-relative">
+    <div class="position-absolute top-0 bottom-0 start-0 end-0">{% include pretty-pattern.html width=20 height=40 seed=1 %}</div>
     {{ content }}
-    <div class="bg-tiled flex-grow-1"></div>
 </div>
 <div class="flex-shrink-0">
     {% include footer.html %}
