@@ -2,5 +2,5 @@
 
 set -ex
 
-bundle update
+bundle update --all
 nix-shell -p bundix --run 'bundix -l'
