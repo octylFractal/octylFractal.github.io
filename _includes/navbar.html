@@ -1,12 +1,15 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
-    <div class="container-fluid">
+    <div class="container-fluid justify-content-center">
         <a class="navbar-brand font-monospace d-inline-flex align-items-center" href="/">
             <img src="/assets/images/avatar.png"
                  width="48" height="48"
                  class="rounded-circle me-3" alt=""/>
-            <h1 class="mb-0">
-                {% include rainbowify.html text=site.title %}
-            </h1>
+            <div class="d-flex flex-column">
+                <h1 class="mb-0">
+                    {% include rainbowify.html text=site.title %}
+                </h1>
+                <span class="fs-6 fst-italic">dracony-coded software</span>
+            </div>
         </a>
         <button id="global-navbar-toggler" class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#global-navbar" aria-controls="global-navbar" aria-expanded="true"
