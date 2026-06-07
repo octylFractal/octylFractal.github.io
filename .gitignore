@@ -1,8 +1,0 @@
-_site
-.sass-cache
-.jekyll-cache
-.jekyll-metadata
-node_modules
-
-# This data is not sensitive, but it is specific to the environment.
-/_data/env.yml
